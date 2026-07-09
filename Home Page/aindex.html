@@ -42,5 +42,38 @@ location.pathname === path;
                onClick={() => setIsOpen (!isOpen)}
                className="text-gray-700 hover:text-teal-600 focus:outline-none"
                >
-               {isOpen 
+               {isOpen ? <X size={24} /> : <Menu size={24} />}
+               </button>
+               </div>
+               </div>
+
+                  {/* Mobile Navigation */}
+                  {isOpen && (
+                  <div className="md:hidden pb-4">
+                     <div className="flex flex-col space-y-2">
+
+                        {navLinks.map((link)+>(
+                        <Link
+                           key={link.path}
+                           to={link.path}
+                           onClick={() => setIsOpen(false)}
+                        className={'px-4 py-2 rounded-lg text-sm font-medium transition-all duraction-200 ${ is Active(link.path)
+                        ? 'bg-teal-600 text-beige shadow-sm'
+                        :'text-red-600 text-white shadow-sm'
+                        :'text-gray-700 hover:bg-teal-50 hover:text-teal-700'
+                        }'}
+                        >
+                        {link.name}
+                     </Link>
+                        ))}
+                     </div>
+                  </div>
+                  )}
+               </div>
+               </nav>
+                  );
+                  };
+                  export efault Navbar;
+                     
+                                             
                
