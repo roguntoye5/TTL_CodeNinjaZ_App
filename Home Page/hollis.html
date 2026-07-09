@@ -1,96 +1,171 @@
-import { ArrowLeft, Code, Heart, Zap} from
-    'lucide-react';
-     import {Link} from 'react-router-dom';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hollis Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #F3F3E2;
+      color: #374151;
+    }
 
-     const HollisPage = () => {
-        return ( 
-          <div className="min-h-screen bg [F3F3E2]">
-             <main className="py-12 px-4">
-                <div className="max-w-4xl mx-auto">
-                  <Link
-                    to="/"
-                    className="inLine-flex items-center
-              space-x-2 text [D2AB80]
-                    transition-colors mb-8"
-                    >
-                     <ArrowLeft size={25} />
-                       <span>Back to Home</span>
-                     </ArrowLeft>Link>
+    .min-h-screen {
+      min-height: 100vh;
+    }
 
-                  <div className=[9A7449]
-                    >
-                    <ArrowLeft size={20} />
-                    <span>Back to Home</span>
-                    </div>
+    .py-12 {
+      padding: 3rem 0;
+    }
 
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="bg-gradient-to-r from {82CAFF}">
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
 
-                      <div className="p-8">
-                      <h1 className="text-4xl font bold text-gray-800 mb 4">Hollis<h1>
+    .max-w-4xl {
+      max-width: 56rem;
+      margin: 0 auto;
+    }
 
-                          <p className="text-xl text-gray-600 mb-8">
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5;
+      margin-bottom: 2;
+      color: #D2AB80;
+      text-decoration: none;
+      transition: color 0.2;
+      font-weight: 600;
+    }
 
-                            Code Ninjaz Raft Member
-                          </p>
+    .back-link:hover {
+      color: #9A7449;
+    }
 
-                        <div className="space-y-6">
-                          <div className="flex items-start space-x-4">
-                            
-                            <iv className="[82CAFF]">
-                      </h1>
-                              <Code className=[82CAFF] size={24}
-                                </div>
-                                <div>
-                                  <h3 className="font-inter text-gray-800>Developer</h3>
-                                    <p className="text-gray-
-                                    600">"I love playing videogames" </p>
-                                  </h3>div>
-                                </div>
+    .card {
+      background: #fff;
+      border-radius: 1;
+      box-shadow: 0 10 15 (0, 0, 0, 0.1);
+      overflow: hidden;
+    }
 
-                                <div className="flex items-start space -x-4"
+    .header {
+      background: linear-gradient(to right, #82CAFF, #bfe7ff);
+      height: 80px;
+    }
 
-                                  <div className="[82CAFF]">
-                                </div>
-                                     <Bear className="text-rose-600" size={24} />
+    .p-8 {
+      padding: 2rem;
+    }
 
-                                     </div>
-                                <div>
+    h1 {
+      font-size: 2.25rem;
+      line-height: 1.2;
+      margin: 0 0 1rem;
+      color: #1f2937;
+    }
 
-                                  <h3 className="font-semibold text-gray-800"> Animal Enthusiast</h3>
-                                  <p className="text-gray-600">Passionate about animals of all kinds,/p>
+    .subtitle {
+      font-size: 1.25rem;
+      color: #4b5563;
+      margin-bottom: 2rem;
+    }
 
-                                         </div>
-                                     </div>
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
 
-                                       <div className="flex items-start space-x-4">
-                                               <div className="[9A7449]"
-                                                  <Zap className="text-rose-600" size={24} />
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
 
-                                               </div>
-                                         <div>
-                                           <h3 className="font-semibold text-gray-800">Weight Lifter,/h3>
-                                             <p className="text-gray-600">I enjoy working out and pushing myself to become better</p>
-                                         </div>
-                                       </div>
-                                     </div>
-                                       <div className="mt-8 pt-8 border-t border-gray-100">
+    .icon {
+      width: 24px;
+      flex: 0 0 24px;
+      color: #82CAFF;
+      font-weight: bold;
+    }
 
-                                         <p className="text-gray-500 italic">
-                                           "Because it is the power of God that brings salvation to everyone who believes in Jesus Romans 1:16."
+    .item h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1rem;
+      color: #1f2937;
+    }
 
-                                         </p>
-                                       </div>
-                                       </div>
-                                       </div>
-                                       </div>
-                                     </main>
-                                     </div>
-                                       );
-                                       };
+    .item p {
+      margin: 0;
+      color: #4b5563;
+    }
 
-                                       export default HollisPage;
-                                      
-                                    
-                                
-                                    
+    .footer {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #f3f4f6;
+    }
+
+    .quote {
+      color: #6b7280;
+      font-style: italic;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen">
+    <main class="py-12 px-4">
+      <div class="max-w-4xl">
+        <a href="/" class="back-link">
+          <span>←</span>
+          <span>Back to Home</span>
+        </a>
+
+        <div class="card">
+          <div class="header"></div>
+
+          <div class="p-8">
+            <h1>Hollis</h1>
+            <p class="subtitle">Code Ninjaz Raft Member</p>
+
+            <div class="space-y-6">
+              <div class="item">
+                <div class="icon">⌘</div>
+                <div>
+                  <h3>Developer</h3>
+                  <p>I love playing videogames.</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="icon">♥</div>
+                <div>
+                  <h3>Animal Enthusiast</h3>
+                  <p>Passionate about animals of all kinds.</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="icon">⚡</div>
+                <div>
+                  <h3>Weight Lifter</h3>
+                  <p>I enjoy working out and pushing myself to become better.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer">
+              <p class="quote">
+                "Because it is the power of God that brings salvation to everyone who believes in Jesus Romans 1:16."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
