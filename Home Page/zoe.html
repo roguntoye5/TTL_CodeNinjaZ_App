@@ -1,8 +1,175 @@
-const userProfile = {
-  name: "Zoe Gibson",
-  role: "Developer",
-  hobbies: ["Reading", "Playing Cello", "Listening To Music"],
-  favoriteLanguage: "HTML"
-};
+i<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoe Gibson🧠</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      background: #F3F3E2;
+      color: #374151;
+    }
+    .min-h-screen {
+      min-height: 100vh;}
+    .py-12 {
+      padding: 3rem 0;}
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;}
+    .max-w-4xl {
+      max-width: 56rem;
+      margin: 0 auto;}
 
-function generateBio(profile)
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      color: #D2AB80;
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      color: #9A7449;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(to right, #82CAFF, #bfe7ff);
+      height: 80px;
+    }
+
+    .p-8 {
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      line-height: 1.2;
+      margin: 0 0 1rem;
+      color: #1f2937;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #4b5563;
+      margin-bottom: 2rem;
+    }
+
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .icon {
+      width: 24px;
+      flex: 0 0 24px;
+      color: #82CAFF;
+      font-weight: bold;
+    }
+
+    .item h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1rem;
+      color: #1f2937;
+    }
+
+    .item p {
+      margin: 0;
+      color: #4b5563;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #f3f4f6;
+    }
+
+    .quote {
+      color: #6b7280;
+      font-style: italic;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen">
+    <main class="py-12 px-4">
+      <div class="max-w-4xl">
+        <a href="/" class="back-link">
+          <span>←</span>
+          <span>Back to Home</span>
+        </a>
+
+        <div class="card">
+          <div class="header"></div>
+
+          <div class="p-8">
+            <h1>Zoe</h1>
+            <p class="subtitle">Code Ninjaz Raft Member</p>
+
+            <div class="space-y-6">
+              <div class="item">
+                <div class="icon">⌘</div>
+                <div>
+                  <h3>Interests</h3>
+                  <p>Vinyls</p>
+                  <p>Music</p>
+                  <p>Medicine</p>
+                  <p>Anatomy</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="icon">♥</div>
+                <div>
+                  <h3>Favorite Pieces of Media</h3>
+                  <p>🏴‍☠️One Piece</p>
+                  <p>🦇Son of Batman</p>
+                  <p>🌕Moon Knight</p>
+                  <p>🥷Lego Ninjago</p>
+                  <p>🎶Stray Kids</p>
+                  <p>🎵BTS</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="icon">⚡</div>
+                <div>
+                  <h3>Fun Facts About Me</h3>
+                  <p>I play cello and am CPR certified.</p>
+                  <p>I am the social media manager of the North Atlanta Chapter of the American Heart Association</p>
+                    <p>Administrative Assistance Manager for the North Atlanta Orchestra</p>
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer">
+              <p class="quote">
+                "As iron sharpens iron, brother sharpens brother"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
