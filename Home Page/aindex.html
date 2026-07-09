@@ -1,5 +1,46 @@
-   const Navbar = () => {
-   const [isOpen, setIsOpen] = useState(false);
-   const location=useLocation
-
    const navLinks= [
+   { name: 'Home', path: '/'},
+   { name: 'Hollis', path: '/hollis' },
+   { name: "Likhita', path: '/likhita'},
+   { name: "Rachel', path: '/rachel'},
+   { name: "Zoe', path: '/zoe'},
+];
+
+   const isActive = (path: string) =>
+location.pathname === path;
+
+   return (
+   <nav className="bg [F3F3E2] shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="flex items-center justify-between h-16">
+              {/* 🥷 */}
+              <Link to="/" className="flex items-centr space-x-2>
+                 <span className="text-2xl font-bold text-gray-800"> Code Ninjaz</div>span>
+      </Link>
+
+         {/*Desktop Navigation*/}
+         <div className="hidden md:flex items-center space x-1">
+            {navLink.map((link)=> ( 
+            <Link 
+               key={link.path}
+               to={link.path}
+               className={'px-4 py-2 rounded-lg text-sm font-medium transition-all duraction-200 ${
+            is Active(link.path)
+            ? 'bg-teal-600 text-gray shadow-sm'
+
+            : 'text-gray-700 hover:bg-teal-50 hover:text-teal-700'
+            }'}
+            >
+            {link.name}
+         </Link>
+            ))}
+         </div>
+
+         {/* Mobile menu button */}
+         <div className="md:hidden">
+            <button
+               onClick={() => setIsOpen (!isOpen)}
+               className="text-gray-700 hover:text-teal-600 focus:outline-none"
+               >
+               {isOpen 
+               
